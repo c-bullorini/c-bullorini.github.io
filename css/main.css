@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 *,
 *::before,
 *::after {
@@ -12,7 +13,7 @@ body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lobster", sans-serif;
 }
 
 .card {
@@ -78,6 +79,7 @@ body {
 ***********************************/
 .main-header {
   display: flex;
+  margin: 0 5%;
   flex-direction: column;
 }
 @media (max-width: 768px) {
@@ -99,6 +101,9 @@ body {
 /***********************************
             NAV BAR
 ***********************************/
+.nav-bar {
+  margin-top: 5%;
+}
 .nav-bar__nav-list {
   display: flex;
   list-style-type: none;
@@ -117,6 +122,7 @@ body {
   color: #333;
   padding: 1em 2em;
   text-decoration: none;
+  font-size: 1.3em;
 }
 @media (max-width: 768px) {
   .nav-bar {
@@ -135,22 +141,55 @@ body {
 .search-bar__logo-container, .search-bar__form-container {
   padding: 3em;
 }
+.search-bar__logo-container {
+  font-size: 3em;
+  padding: 0.5em 0;
+}
 .search-bar__form-container {
   flex-basis: 100%;
   display: flex;
   line-height: 3em;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+.search-bar__form-label {
+  font-size: 2em;
 }
 .search-bar__form-search {
   width: 70%;
   height: 100%;
   align-self: center;
 }
+.search-bar input[type=submit] {
+  background-color: white !important;
+}
 .search-bar__form-submit {
-  background-color: darkslategray;
+  border: none;
+  font-size: 2em;
 }
 .search-bar__carrito-container {
   flex: 0 0 3em;
+}
+.search-bar .type {
+  display: inline-flex;
+}
+.search-bar .type span {
+  word-break: break-all;
+  height: 1.2em;
+  width: 0%;
+  overflow: hidden;
+  animation: t 4s linear infinite alternate;
+}
+.search-bar .type span:before {
+  content: " ";
+  display: inline-block;
+}
+.search-bar .nav-menu__link {
+  text-align: left;
+}
+@keyframes t {
+  90%, 100% {
+    width: 100%;
+  }
 }
 
 /***********************************
@@ -196,6 +235,11 @@ body {
 .section-cards {
   background-color: #f1f2f3;
   padding: 1em;
+}
+
+.section-cards__header {
+  text-align: center;
+  font-size: 1.4em;
 }
 
 .cards-container {
