@@ -3,8 +3,9 @@
 ***********************************/
 .main-header {
   display: flex;
-  margin: 0 5%;
+  padding: 0 5%;
   flex-direction: column;
+  background-color: #f1f2f3;
 
   @media (max-width: 768px) {
     & {
@@ -29,7 +30,7 @@
             NAV BAR
 ***********************************/
 .nav-bar {
-    margin-top: 5%;
+    margin-top: 2%;
 
   &__nav-list {
     display: flex;
@@ -52,9 +53,33 @@
     color: #333;
     padding: 1em 2em;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 2em;
+    transition: 0.3s;
+    border: 1px solid red;
+      &:hover {
+        border: 1px solid transparent;
+        background: red url(https://i.postimg.cc/wBXGXbWN/pixel.png); // 360px x 1080px
+        transition-delay: 0.8s;
+        background-size: 180px;
+        animation: animate 0.5s steps(8) forwards;
+      }
+    &:last-of-type {
+      border: 1px solid black;
+      &:hover {
+        background: black url(/img/pixelblack.png); // 360px x 1080px
+      }
+    }
+  }
+  @keyframes animate {
+    0% {
+      background-position-y: 0;
+    }
+    100% {
+      background-position-y: -480px;
+    }
   }
 
+  
   @media (max-width: 768px) {
     & {
       display: none;
@@ -79,7 +104,7 @@
       padding: 0.5em 0;
   }
   &__form-container {
-    flex-basis: 100%;
+    flex-basis: 50%;
     display: flex;
     line-height: 3em;
     justify-content: space-evenly;
@@ -93,9 +118,11 @@
     width: 70%;
     height: 100%;
     align-self: center;
+    margin: auto 0;
+    padding: 0.7em;
   }
   input[type="submit"] {
-    background-color: white !important;
+    background-color: transparent;
   };
   &__form-submit {
     border: none;

@@ -1,5 +1,5 @@
 .section-cards {
-    background-color: #f1f2f3;
+    background-color: #fff;
     padding: 1em;
 }
 .section-cards__header {
@@ -12,7 +12,8 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
-
+    margin: 5% 10%;
+    
     @media (min-width: 1200px) {
         & {
             gap: 2em;
